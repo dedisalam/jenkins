@@ -2,11 +2,8 @@ version: '3.7'
 
 services:
   test-jenkins:
-    build:
-      context: ./
-      dockerfile: Dockerfile
     container_name: test-jenkins
-    image: dedisalam/test-jenkins
+    image: dedisalam/jenkins
     ports:
       - '10000:80'
     restart: 'unless-stopped'
