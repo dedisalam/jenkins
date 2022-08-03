@@ -8,6 +8,7 @@ pipeline {
           sh 'npm run build'
         }
 
+        sh 'docker container ls'
       }
     }
 
