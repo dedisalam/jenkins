@@ -11,11 +11,5 @@ pipeline {
       }
     }
 
-    stage('create image') {
-      steps {
-        dockerNode(image: 'dedisalam/jenkins')
-      }
-    }
-
   }
 }
