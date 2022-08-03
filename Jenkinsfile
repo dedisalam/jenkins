@@ -1,12 +1,14 @@
 pipeline {
-  agent any
-  stages {
-    stage('Build') {
-      steps {
-        nodejs(nodeJSInstallationName: 'nodejs14', configId: 'nodejs14') {
-          sh 'npm install'
-        }
+  agent {
+    node {
+      label 'nodejs14'
+    }
 
+  }
+  stages {
+    stage('build') {
+      steps {
+        echo 'build'
       }
     }
 
