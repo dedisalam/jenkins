@@ -1,14 +1,9 @@
 pipeline {
   agent any
   stages {
-    stage('build') {
+    stage('clean up') {
       steps {
-        nodejs('nodejs14') {
-          sh 'npm install'
-          sh 'npm run build'
-        }
-
-        sh 'docker container ls'
+        sh 'docker system prune -f'
       }
     }
 
