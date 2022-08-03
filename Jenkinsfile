@@ -8,7 +8,7 @@ pipeline {
   stages {
     stage('clean up') {
       steps {
-        sh 'docker system prune -f'
+        echo 'clean up'
       }
     }
 
