@@ -3,7 +3,7 @@ pipeline {
   stages {
     stage('Build') {
       steps {
-        nodejs('node14') {
+        nodejs(nodeJSInstallationName: 'nodejs14', configId: 'nodejs14') {
           sh 'npm install'
         }
 
