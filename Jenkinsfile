@@ -7,5 +7,15 @@ pipeline {
       }
     }
 
+    stage('build') {
+      steps {
+        nodejs(nodeJSInstallationName: 'nodejs14', configId: 'nodejs14') {
+          sh 'npm install'
+          sh 'npm run build'
+        }
+
+      }
+    }
+
   }
 }
