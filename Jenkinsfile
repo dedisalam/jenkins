@@ -1,5 +1,10 @@
 pipeline {
-  agent any
+  agent {
+    docker {
+      image 'dedisalam/test-jenkins'
+    }
+
+  }
   stages {
     stage('clean up') {
       steps {
