@@ -4,7 +4,10 @@ pipeline {
     stage('build') {
       steps {
         echo 'build'
-        nodejs 'nodejs14'
+        nodejs('nodejs14') {
+          sh 'npm install'
+        }
+
       }
     }
 
